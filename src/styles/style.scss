@@ -1,0 +1,53 @@
+.pagination--bar {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	place-items: center;
+}
+
+.pagination--item {
+	cursor: pointer;
+	padding: 0 12px;
+	height: 32px;
+	text-align: center;
+	margin: auto 4px;
+	color: rgba(0, 0, 0, 0.87);
+	display: flex;
+	display: flex;
+	place-items: center;
+	box-sizing: border-box;
+	letter-spacing: 0.01071em;
+	border-radius: 16px;
+	font-size: 16px;
+	min-width: 32px;
+	background: #f4f4f4;
+
+	&:hover {
+		background-color: #e4e3e3;
+	}
+	&.active {
+		background-color: #d7d5d5;
+	}
+}
+
+.arrow {
+	margin: 0 10px;
+	cursor: pointer;
+	&::before {
+		position: relative;
+		content: '';
+		/* By using an em scale, the arrows will size with the font */
+		display: inline-block;
+		width: 0.4em;
+		height: 0.4em;
+		border-right: 0.12em solid rgba(0, 0, 0, 0.87);
+		border-top: 0.12em solid rgba(0, 0, 0, 0.87);
+	}
+	&.arrow-left {
+		transform: scaleX(-1) rotate(45deg);
+	}
+
+	&.arrow-right {
+		transform: rotate(45deg);
+	}
+}
